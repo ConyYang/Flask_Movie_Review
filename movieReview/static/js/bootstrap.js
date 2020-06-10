@@ -3413,7 +3413,7 @@ var ScrollSpy = function ($$$1) {
         return item;
       }).sort(function (a, b) {
         return a[0] - b[0];
-      }).forEach(function (item) {
+      }). forEach(function (item) {
         _this2._offsets.push(item[0]);
 
         _this2._targets.push(item[1]);

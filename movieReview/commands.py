@@ -16,7 +16,8 @@ def forge(count):
         record = Record(
             username=faker.name(),
             review=faker.sentence(),
-            timestamp=faker.date_time_this_year()
+            timestamp=faker.date_time_this_year(),
+            mark=faker.random.number({min: 8, max: 10})
         )
         db.session.add(record)
     db.session.commit()

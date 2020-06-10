@@ -11,7 +11,8 @@ def index():
     if myform.validate_on_submit():
         username = myform.username.data
         review = myform.review.data
-        new_record = Record(username=username, review=review)
+        mark = myform.mark.data
+        new_record = Record(username=username, review=review, mark=mark)
         db.session.add(new_record)
         db.session.commit()
         flash('Your review to the movie has been updated !')

@@ -26,6 +26,7 @@
                            data-delay="500">
                         {{ moment(record.timestamp).fromNow(refresh=True) }}
                     </small>
+            <span> {{ record.mark }}</span>
         </div>
         <p class="mb-1" style="color: #1b1e21">{{ record.review }}</p>
     </a>
