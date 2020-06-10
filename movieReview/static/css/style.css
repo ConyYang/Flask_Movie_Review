@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(10, 10, 15) !important;
+    color: white;
+}
+
+p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.container {
+    max-width: 640px !important;
+}
+
+.hello-form {
+    margin-bottom: 20px;
+}
+
+header {
+    margin: 50px 0 40px 0;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+    .sub-title {
+        display: block;
+    }
+}
+
+header a {
+    text-decoration: none !important;
+}
+
+footer {
+    margin: 20px;
+}
+
+#logo-img {
+  background: url('static/assests/ipman.jpeg') no-repeat;
+  width: auto;
+  height: 180px;
+  margin: 10px 10px 10px 140px;
+}
+
+strong{
+    color: #FF6347;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.moviename{
+    color: white;
+    font-size: 42px;
+    font-family: 'Oxygen', sans-serif;
+}
