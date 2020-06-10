@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=devicewidth,initialscale=1,shrinktofit=no">
+    <title>{% block title %}Movie Review{% endblock %}</title>
+    <link rel= "icon"href="{{url_for('static',filename='favicon.ico')}}">
+    <link rel="stylesheet"href="{{url_for('static',filename='css/bootstrap.min.css')}}"type="text/css">
+    <link rel="stylesheet"href="{{url_for('static',filename='css/style.css')}}"type="text/css">
+</head>
+<body>
+    <main class = "container">
+        <header>
+            <h1 class="text-center display-4">
+                <a href="{{ url_for('index') }}" class="text-success">
+                    <strong>Movie Review</strong>
+                    <br>
+                    <span>
+                        <small class="moviename">Ip Man 4</small>
+                    </span>
+                    <div id = "logo-img" alt="Logo image"></div>
+                </a>
+            </h1>
+        </header>
+        {% for review in get_flashed_messages() %}
+        <div class="alert alert-info">
+            <button type="button"class="close"datadismiss="alert">&times;</button>
+            {{ review }}
+        </div>
+        {% endfor %}
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+</body>
+</html>
