@@ -1,7 +1,7 @@
 import click
 from movieReview import app, db
 from movieReview.models import Record
-
+import random
 @app.cli.command()
 @click.option('--count', default=10, help='Random 10 reviews')
 def forge(count):
@@ -17,9 +17,12 @@ def forge(count):
             username=faker.name(),
             review=faker.sentence(),
             timestamp=faker.date_time_this_year(),
-            mark=faker.random.number({min: 8, max: 10})
+            mark=random.randint(8, 10)
         )
+        print(record)
         db.session.add(record)
     db.session.commit()
 
     click.echo('Generated %d reviews for the movie.' % count)
+
+# forge(10)

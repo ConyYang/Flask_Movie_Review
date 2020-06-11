@@ -19,10 +19,17 @@
                         <small class="moviename">Ip Man 4</small>
                     </span>
                     <div id = "logo-img" alt="Logo image"></div>
-<!--                    <span>{{ }}</span>-->
                 </a>
             </h1>
+            <div class="text-center">
+            You can watch the video here:
+            <a href="https://www.youtube.com/watch?v=5DBoq3ATsxM&t=504s"
+               style="color: white" target="_blank"> <u>Movie Trailer</u></a>
+            </div>
+            <h4 class="text-center" style="color: white;"  >Score: {{ mark }}</h4>
         </header>
+
+
         {% for review in get_flashed_messages() %}
         <div class="alert alert-info">
             <button type="button"class="close"datadismiss="alert">&times;</button>

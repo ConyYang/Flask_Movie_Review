@@ -1,2 +1,4 @@
 venv
 .idea
+
+movieReview/__pycache__

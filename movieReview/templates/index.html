@@ -16,7 +16,7 @@
     {% for record in records %}
     <a class="list-group-item list-group-item-action flex-column">
         <div class="d=flex w-100 justify-content-between">
-            <h5 class="mb-lg-4" style="color: #DB7093">{{ record.username }}
+            <h5 class="mb-lg-1" style="color: #DB7093">{{ record.username }}
                 <small class="text-muted">
                     #{{ loop.revindex }}
                 </small>
@@ -26,7 +26,7 @@
                            data-delay="500">
                         {{ moment(record.timestamp).fromNow(refresh=True) }}
                     </small>
-            <span> {{ record.mark }}</span>
+            <p style="color:#d39e00; text-align: right" > Mark: {{ record.mark }}</p>
         </div>
         <p class="mb-1" style="color: #1b1e21">{{ record.review }}</p>
     </a>

@@ -6,6 +6,7 @@ body {
 p {
     overflow-wrap: break-word;
     word-wrap: break-word;
+
 }
 
 .container {
@@ -59,4 +60,8 @@ strong{
     color: white;
     font-size: 42px;
     font-family: 'Oxygen', sans-serif;
+}
+
+.Trailer{
+    ;
 }
